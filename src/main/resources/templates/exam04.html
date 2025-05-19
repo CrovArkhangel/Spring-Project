@@ -9,17 +9,17 @@
   <div th:errors="*{name}" style="color:red">エラー！</div>
   <label>
     名前：
-    <input type="text" name="name">
+    <input type="text" name="name" th:field="*{name}">
   </label><br>
   <div th:errors="*{age}" style="color:red">エラー！</div>
   <label>
     年齢：
-    <input type="text" name="age">
+    <input type="text" name="age" th:field="*{age}">
   </label><br>
   <div th:errors="*{comment}" style="color:red">エラー！</div>
   <label>
     コメント：<br>
-    <textarea name="comment" rows="4" cols="35">
+    <textarea name="comment" rows="4" cols="35" th:field="*{comment}">
     </textarea>
   </label><br>
   <button type="submit">送信</button>
