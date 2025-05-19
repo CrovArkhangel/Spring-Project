@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{exam03/post}" method="post">
+  <label>
+    商品1
+    <input type="text" name="product1">
+  </label><br>
+  <label>
+    商品2
+    <input type="text" name="product2">
+  </label><br>
+  <label>
+    商品3
+    <input type="text" name="product3">
+  </label><br>
+  <button type="submit">購入</button>
+</form>
+</body>
+</html>
