@@ -1,8 +1,14 @@
 package com.example.Form;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class UserForm {
+    @NotBlank(message = "名前は必須入力です")
     private String name;
+    @NotNull(message = "年齢は必須入力です")
     private Integer age;
+    @NotBlank(message = "コメントは必須入力です")
     private String comment;
 
     @Override
