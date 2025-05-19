@@ -5,20 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<form>
+<form th:action="@{/exam04/post}" th:object="${userForm}" method="post">
+  <div th:errors="*{name}" style="color:red">エラー！</div>
   <label>
     名前：
     <input type="text" name="name">
-  </label>
+  </label><br>
+  <div th:errors="*{age}" style="color:red">エラー！</div>
   <label>
     年齢：
-    <input type="text" name="name">
-  </label>
+    <input type="text" name="age">
+  </label><br>
+  <div th:errors="*{comment}" style="color:red">エラー！</div>
   <label>
-    コメント：
-    <textarea name="name" rows="4" cols="35">
+    コメント：<br>
+    <textarea name="comment" rows="4" cols="35">
     </textarea>
-  </label>
+  </label><br>
   <button type="submit">送信</button>
 </form>
 </body>
