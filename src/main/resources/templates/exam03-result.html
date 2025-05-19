@@ -5,6 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+<h1>合計金額</h1>
 
+<p>■税抜き価格</p>
+<span th:text="${#numbers.formatInteger(application.sum,0,'COMMA')}"></span><span>円</span>
+<p>■税込み価格</p>
+<span th:text="${#numbers.formatInteger(application.sum2,0,'COMMA')}"></span><span>円</span>
 </body>
 </html>

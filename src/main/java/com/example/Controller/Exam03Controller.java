@@ -19,9 +19,9 @@ public class Exam03Controller {
     }
     @PostMapping("/post")
     public String post(Integer product1, Integer product2,Integer product3){
-        application.setAttribute("product1", product1);
-        application.setAttribute("product2", product2);
-        application.setAttribute("product3", product3);
+        int sum = product1 + product2 + product3;
+        application.setAttribute("sum", sum);
+        application.setAttribute("sum2", sum*1.1);
         return "exam03-result";
     }
 }
